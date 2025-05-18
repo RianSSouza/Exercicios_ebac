@@ -22,6 +22,7 @@ form.addEventListener('submit', function(e){
      
     campoSuccess.style.display = 'block';
     }else{
+        campoSuccess.style.display = 'none';
         numA.style.border = '1px solid red';
         campoError.style.display = 'block';
     }
