@@ -19,8 +19,7 @@ form.addEventListener('submit', function(e){
     if (formValido) {
         numA.style.border = '';
         campoError.style.display = 'none';
-     
-    campoSuccess.style.display = 'block';
+        campoSuccess.style.display = 'block';
     }else{
         campoSuccess.style.display = 'none';
         numA.style.border = '1px solid red';
