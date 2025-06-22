@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    background-color: #2b037d;
+}
+
+.container{
+    width: 680px;
+    height: auto;
+}
+
+header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#btn-new {
+    padding: 10px 20px;
+    background-color: #5f20df;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-adicionar {
+    display: flex;
+}
+
+#campo-tarefa {
+    padding: 10px;
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+#campo-botoes {
+    display: flex;
+    gap: 10px;
+    width: 200px;
+}
+
+#campo-botoes input {
+    padding: 8px;
+    width: 85px;
+    background-color: #4a22c2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lista-tarefas{
+    background: #465dc8;
+    color: #ffff;
+    padding: 15px;
+}
+
+.lista-tarefas ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-tarefas li{
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    background-color: #000caf;
+    cursor: pointer;
+}
+
+.lista-tarefas span button {
+    background-color: #5f20df;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+
+}
+
+.concluida {
+    text-decoration: line-through;
+    opacity: 0.6; 
+}
