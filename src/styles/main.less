@@ -1,0 +1,142 @@
+@import "maps.less";
+
+@breakpointsMobile: ~"(max-width: 767px)";
+@breakpointsTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.containerConfig(){
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body{
+    background-color: #colors[backgroundBody];
+}
+
+li{
+    list-style: none;
+}
+
+header{
+    background-color: #colors[backgroundHeader];
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header {
+    .container{
+        .containerConfig();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+
+        @media @breakpointsMobile{
+            flex-direction: column;
+            text-align: center;
+
+            img{
+                margin-bottom: 12px
+            }
+    }
+
+    @media @breakpointsTablet{
+        img{
+            margin-left: 10px;
+        }
+    }
+    }
+
+}
+
+.menu{
+    display: flex;
+    li{
+        font-weight: bold;
+        margin-left: 24px;
+
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    @media @breakpointsMobile{
+        flex-direction: column;
+
+        li{
+            margin: 8px 0;
+
+        }
+    }
+
+    @media @breakpointsTablet{
+        padding: 0 16px;
+    }
+}
+
+section{
+    .containerConfig();
+    padding: 56px 0;
+
+    .products{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 32.66%);
+        column-gap:1%;
+        row-gap: 4%;
+        width: 100%;
+
+        &-item{
+            img{
+                width: 100%;
+                border-radius: 16px;
+            }
+
+            &-button{
+                display: block;
+                background-color: #colors[backgroundButton];
+                color: #fff;
+                text-align: center;
+                padding: 8px 0;
+                border-radius: 8px;
+                margin-top: 8px;
+                text-decoration: none;
+                transition: all ease .3s;
+
+                &:hover{
+                    background-color: #4cd137;
+                    transform: scale(1.05);
+                }
+            }
+        }    
+}
+
+@media @breakpointsMobile{
+    padding: 32px;
+
+    .products{
+        display: block;
+    }
+
+    .products-item{
+        margin-bottom: 32px;
+    }
+}
+
+@media @breakpointsTablet {
+    padding: 32px;
+    .products {
+        grid-template-columns: repeat(2, 48%);
+        margin-bottom: 20px;
+    }
+}
+} 
