@@ -1,0 +1,94 @@
+@corDeFundo: #f5f6fa;
+@corDoBotaoAdicionar: #00a8ff;
+@corBotaoAdicionarHover: #0097e6;
+@corBotaoExcluir: #c23616;
+@corBotaoExcluirHover: #e84118;
+@fontTexto: Arial, Helvetica, sans-serif;
+
+.configButton (){
+    cursor: Pointer;
+}
+
+body{
+    background-color: @corDeFundo;
+    font-family: @fontTexto;
+}
+
+header{
+    padding: 20px 0;
+}
+
+main{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#tarefa_form{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    #tarefa_form_campo{
+        padding: 10px;
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 16px;
+        font-size: 16px;
+    }
+
+    #tarefa_form_botao{
+        .configButton();
+        padding: 10px;
+        width: 100px;
+        border: none;
+        border-radius: 10px;
+        background-color: @corDoBotaoAdicionar;
+        color: #fff;
+        font-weight: bold;
+
+        &:hover{
+            background-color: @corBotaoAdicionarHover;
+        }
+    }
+}
+
+.tarefa_list{
+    display: flex;
+    justify-content: center;
+    #tarefa_list_campos{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        li{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            padding: 5px;
+            background-color:#dcdde1;
+            border-radius: 16px;
+            width: 450px;
+            align-items: center;
+
+            button{
+                .configButton();
+                background-color: @corBotaoExcluir;
+                border: none;
+                border-radius: 20px;
+                width: 80px;
+                height: 40px;
+                color: #fff;
+
+                &:hover{
+                    background-color: @corBotaoExcluirHover;
+                }
+            }
+        }
+    }
+}
+
+
+
