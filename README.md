@@ -1,0 +1,1 @@
+Para esta atividade utilizei o pré-processador LESS modularização e reaproveitamento de código CSS. Seguindo o objetivo da aticvidade utilizei o a arquitetura BEM para padronizar a nomenclatura das classes dando mais organização e legibilidade. O Grunt foi utilizado além para automatizar a compliação do arquivo LESS em CSS.
